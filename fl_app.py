@@ -2,6 +2,7 @@
 import streamlit as st
 import shap
 import pandas as pd
+import matplotlib.pyplot as plt
 from streamlit_shap import st_shap
 from sklearn.metrics import classification_report
 
