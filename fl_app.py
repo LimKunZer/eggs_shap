@@ -91,4 +91,6 @@ st_shap(shap.plots.force(fl_explainer.expected_value[1], fl_shap_values[1][6,:],
 
 # Decision plot
 st.subheader("Decision Plot")
-st_shap(shap.decision_plot(fl_explainer.expected_value[0], fl_shap_values[0], X_test.columns))
+fig, ax = plt.subplots()
+shap.decision_plot(fl_explainer.expected_value[0], fl_shap_values[0], X_test.columns)
+st.pyplot(fig)
